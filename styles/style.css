@@ -1,0 +1,134 @@
+:root {
+    --main-color: #19356E;
+    --secondary-color: #2F6690;
+    --accent-color: #3A7CA5;
+    --dark-color: #DFDFDF;
+    --grey-color: #D3D3D3;
+    --light-color: #7fc2d7;
+    --main-font: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+html, body {
+
+    height: 100%;
+  }
+  body {
+    display: flex;
+    flex-direction: column;
+  }
+
+  /* SIDEBAR CSS */
+  .wrapper {
+    display: flex;
+    flex: 1;
+}
+
+.sidebar {
+    display: flex;
+    flex-direction: column;
+    width: 350px;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: var(--main-color);
+    padding-top: 20px;
+}
+
+.sidebar .nav-link {
+    color: white;
+    font-size: 20px;
+    font-family: var(--main-font);
+}
+
+.sidebar .nav-link:hover {
+    background-color: #102247;
+}
+
+.sidebar-bottom {
+    margin-top: auto;
+    width: 100%;
+    height: auto;
+    padding-bottom: 0;
+}
+.contact-info {
+  display: block;
+  align-items: left;
+  font-size: 16px;
+  font-family:var(--main-font);
+}
+.contact-bar {
+    color: white;
+    padding: 10px;
+    background-color: rgba(0, 0, 0, 0.151); /* Optional: Add a background for better visibility */
+    border-top: 2px solid rgba(255, 255, 255, 0.2); /* Optional: Add a top border for separation */
+    display:flex;
+    justify-content: space-around;
+    align-items: center;
+    gap: 20px; /* Optional: Add space between text and image */
+}
+
+.sidebar-image img{
+  height: 100px;
+  width: inherit;
+}
+
+
+
+
+/* NAVBAR CSS */
+
+  .navbar-brand {
+    padding-left: 10px;
+  }
+  .main-content {
+    margin-left: 350px;
+    padding: 20px;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    font-family: var(--main-font);
+  }
+  .footer {
+    background-color: var(--dark-color);
+    padding: 10px 0;
+  }
+  .img{
+    opacity: 0.3;
+    padding-bottom: 20px;
+  }
+
+
+
+  .image-container {
+      position: relative;
+      max-width: 1000px;
+      margin: auto;
+      border: 2px solid #DDD;
+      border-radius: 10px;
+      overflow: hidden;
+  }
+
+  .image-container img {
+      width: 100%;
+      display: block;
+  }
+
+  .overlay-text {
+      position:sticky;
+      
+      left: 20px;
+      color: #fff;
+      background-color: rgba(0, 0, 0, 0.5);
+      padding: 10px;
+      border-radius: 5px;
+      
+  }
+  .jumbotron {
+    background-color: var(--main-color);
+    color: white;
+    
+  }
+
+
+
