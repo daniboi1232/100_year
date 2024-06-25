@@ -5,8 +5,8 @@
     </a>
     <nav class="nav flex-column">
       <a class="nav-link active" href="#">Home</a>
-      <a class="nav-link" href="#">About</a>
-      <a class="nav-link" href="/pages/attendees.php">Current Attendees</a>
+      <a class="nav-link" href="">About</a>
+      <a class="nav-link" href="attendees.php">Current Attendees</a>
       <a class="nav-link" href="#">Contact</a>
     </nav>
     <div class="sidebar-bottom">
