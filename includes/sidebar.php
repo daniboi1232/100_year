@@ -4,9 +4,9 @@
       <img src="images/100yearlogo.png" alt="Logo" style="width: 150%; max-width: 300px;"> <!-- Adjust the width as needed -->
     </a>
     <nav class="nav flex-column">
-      <a class="nav-link active" href="#">Home</a>
-      <a class="nav-link" href="">About</a>
+      <a class="nav-link active" href="index.php">Home</a>
       <a class="nav-link" href="attendees.php">Current Attendees</a>
+      <a class="nav-link" href="">Book A Seat</a>
       <a class="nav-link" href="#">Contact</a>
     </nav>
     <div class="sidebar-bottom">
