@@ -44,8 +44,7 @@
 </div>
 
 <div class="container-fluid mt-3">
-  <h3>Carousel Example</h3>
-  <p>The following example shows how to create a basic carousel with indicators and controls.</p>
+  <!--   Use for text below the slideshow  -->
 </div>
 
 </body>

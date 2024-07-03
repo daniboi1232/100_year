@@ -132,3 +132,54 @@ html, body {
 
 
 
+
+
+
+
+
+
+
+
+
+/*    Login / Register CSS    */
+
+.signin {
+  position:absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: var(--grey-color);
+  padding: 20px;
+  border-radius: 5px;
+}
+
+.signin input {
+  margin: 10px;
+}
+
+.signin button {
+  
+  background-color: var(--accent-color);
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  border-radius: 5px;
+}
+
+.signin button:hover {
+  opacity: 0.8;
+}
+
+.signin h2 {
+  text-align: center;
+  color: var(--main-color);
+}
+
+.entry {
+  background-image: URL("../images/backgroundlogin.png");
+  background-repeat: inherit;
+  background-size: 20%;
+}

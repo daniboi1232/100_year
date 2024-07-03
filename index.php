@@ -1,13 +1,7 @@
 <?php  
 
-session_start();
+include 'includes/session_check';
 
-if (!isset($_SESSION['user_id'])) {
-    header("Location: login.php");
-    exit;
-}
-
-echo "Welcome, " . $_SESSION['username'] . "!";
 
 
 ?>
@@ -57,11 +51,7 @@ echo "Welcome, " . $_SESSION['username'] . "!";
   </div>
   
   <!-- Footer -->
-  <footer class="footer bg-light text-center">
-    <div class="container">
-      <span class="text-muted">&copy; <?php echo date('Y'); ?> My Website. All rights reserved.</span>
-    </div>
-  </footer>
+  <?php include_once 'includes/footer.php'; ?>
 
   <!-- Optional JavaScript -->
   <!-- jQuery first, then Popper.js, then Bootstrap JS -->

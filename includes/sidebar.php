@@ -6,7 +6,7 @@
     <nav class="nav flex-column">
       <a class="nav-link active" href="index.php">Home</a>
       <a class="nav-link" href="attendees.php">Current Attendees</a>
-      <a class="nav-link" href="">Book A Seat</a>
+      <a class="nav-link" href="booking.php">Book A Seat</a>
       <a class="nav-link" href="#">Contact</a>
     </nav>
     <div class="sidebar-bottom">

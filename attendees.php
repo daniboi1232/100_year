@@ -37,9 +37,13 @@
             ?>
                 </tbody>
             </table>
-
-
+            <form action="logout.php" method="POST">
+                <input type="submit" name="expire_session" value="Log Out">
+            </form>
+            
         </div>
     </div>
+
+<?php include_once 'footer.php'; ?>
 
 </body>

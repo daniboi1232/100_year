@@ -63,15 +63,3 @@ CREATE TABLE activity_signups (
     FOREIGN KEY (session_id) REFERENCES activity_sessions(id)
 );
 
--- Insert example data
-INSERT INTO attendees (first_name, last_name, email, phone_number, attending)
-VALUES ('John', 'Doe', 'john.doe@example.com', '123-456-7890', TRUE);
-
-INSERT INTO store_items (item_name, description, price, stock)
-VALUES ('T-Shirt', 'Reunion T-Shirt', 20.00, 50);
-
-INSERT INTO activities (activity_name, description)
-VALUES ('Welcome Dinner', 'A formal dinner to welcome everyone');
-
-INSERT INTO activity_sessions (activity_id, session_time, location)
-VALUES (1, '2024-07-10 18:00:00', 'School Gymnasium');

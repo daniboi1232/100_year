@@ -1,10 +1,5 @@
 <?php
-session_start();
-
-if (!isset($_SESSION['user_id'])) {
-    header("Location: login.php");
-    exit;
-}
+include 'session_check.php';
 
 echo "Welcome, " . $_SESSION['username'] . "!";
 ?>
