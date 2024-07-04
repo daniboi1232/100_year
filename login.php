@@ -41,14 +41,12 @@ include_once 'includes/head.php';
         }
         ?>
 
-        <form method="post" action="">
-            <label for="username">Username:</label>
-            <input type="text" name="username" required><br><br>
-            <label for="password">Password:</label>
-            <input type="password" name="password" required><br><br>
+        <form method="post" action="" >
+            <input type="text" name="username" required placeholder="Username"><br>
+            <input type="password" name="password" required placeholder="Password"><br>
             <button type="submit">Login</button>
         </form>
 
-        <p><a href="register.php">Register</a></p>
+        <a href="register.php" class="register-btn">Register</a>
     </div>
 </body>

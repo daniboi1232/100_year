@@ -46,9 +46,7 @@ html, body {
 }
 
 .sidebar-bottom {
-    margin-top: auto;
     width: 100%;
-    height: auto;
     padding-bottom: 0;
 }
 .contact-info {
@@ -73,62 +71,75 @@ html, body {
   width: inherit;
 }
 
+.logout_button {
+  display: flex;
+  margin-left: 15px;
+  margin-top: auto;
+  margin-bottom: 5%;
+}
+
+.logout_button button {
+  padding: 20px;
+}
+
+.navbar-brand {
+  padding-left: 10px;
+}
 
 
 
-/* NAVBAR CSS */
+/* Main Page CSS */
+.main-content {
+  margin-left: 350px;
+  padding: 20px;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  font-family: var(--main-font);
+}
 
-  .navbar-brand {
-    padding-left: 10px;
-  }
-  .main-content {
-    margin-left: 350px;
-    padding: 20px;
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-    font-family: var(--main-font);
-  }
-  .footer {
-    background-color: var(--dark-color);
-    padding: 10px 0;
-  }
-  .img{
-    opacity: 0.3;
-    padding-bottom: 20px;
-  }
-
+/* Footer CSS */
+.footer {
+  background-color: var(--dark-color);
+  padding: 10px 0;
+  margin-left: 300px;
+}
+.img{
+  opacity: 0.3;
+  padding-bottom: 20px;
+}
 
 
-  .image-container {
-      position: relative;
-      max-width: 1000px;
-      margin: auto;
-      border: 2px solid #DDD;
-      border-radius: 10px;
-      overflow: hidden;
-  }
 
-  .image-container img {
-      width: 100%;
-      display: block;
-  }
+.image-container {
+    position: relative;
+    max-width: 1000px;
+    margin: auto;
+    border: 2px solid #DDD;
+    border-radius: 10px;
+    overflow: hidden;
+}
 
-  .overlay-text {
-      position:sticky;
-      
-      left: 20px;
-      color: #fff;
-      background-color: rgba(0, 0, 0, 0.5);
-      padding: 10px;
-      border-radius: 5px;
-      
-  }
-  .jumbotron {
-    background-color: var(--main-color);
-    color: white;
+.image-container img {
+    width: 100%;
+    display: block;
+}
+
+.overlay-text {
+    position:sticky;
     
-  }
+    left: 20px;
+    color: #fff;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 10px;
+    border-radius: 5px;
+    
+}
+.jumbotron {
+  background-color: var(--main-color);
+  color: white;
+  
+}
 
 
 
@@ -137,11 +148,7 @@ html, body {
 
 
 
-
-
-
-
-/*    Login / Register CSS    */
+/*    LOGIN / REGISTER CSS    */
 
 .signin {
   position:absolute;
@@ -155,33 +162,52 @@ html, body {
 
 .signin input {
   margin: 10px;
+  padding: 5%;
+  width: 270px;
 }
 
 .signin button {
-  
+  width: 20%;
   background-color: var(--accent-color);
   color: white;
   padding: 14px 20px;
   margin: 8px 0;
+  margin-left: 10px;
+  border: none;
+  cursor: pointer;
+  width: 93%;
+  border-radius: 5px;
+}
+.signin button:hover {
+  opacity: 0.8;
+}
+
+.signin .register-btn {
+  background-color: var(--accent-color);
+  color: white;
+  padding: 5px 20px;
   border: none;
   cursor: pointer;
   width: 100%;
   border-radius: 5px;
+  margin-top: 20px;
+  margin-left: 10px;
 }
 
-.signin button:hover {
+.signin .register-btn:hover {
   opacity: 0.8;
+  text-decoration: none;
 }
 
 .signin h2 {
   text-align: center;
   color: var(--main-color);
 }
-
 .entry {
   background-color: var(--main-color);
 }
 
+/* Opaque Background for login page */
 .entry::before {
   content: "";
   position: absolute;
@@ -191,5 +217,6 @@ html, body {
   height: 100%;
   background-image: url("../images/backgroundlogin.png");
   background-size: 20%;
-  opacity: 0.2;
+  opacity: 0.05;
 }
+

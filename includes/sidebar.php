@@ -8,7 +8,19 @@
       <a class="nav-link" href="attendees.php">Current Attendees</a>
       <a class="nav-link" href="booking.php">Book A Seat</a>
       <a class="nav-link" href="#">Contact</a>
+      <a class="nav-link" href="#">Contact</a>
+      <a class="nav-link" href="#">Contact</a>
+      <a class="nav-link" href="#">Contact</a>
+      <a class="nav-link" href="#">Contact</a>
     </nav>
+    <?php 
+    include './includes/session_check.php';
+    ?>
+    <div class="logout_button">
+      <form action="logout.php" method="POST">
+        <input type="submit" name="expire_session" value="Log Out">
+      </form>
+    </div>
     <div class="sidebar-bottom">
         <div class="contact-bar">
             <div class="contact-info">

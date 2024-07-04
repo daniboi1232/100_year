@@ -27,7 +27,7 @@ include 'includes/session_check';
       </div>
 
       <div class="image-container">
-        <img src="https://via.placeholder.com/1000x600" alt="Sample Image">
+        <img src="./images/backgroundlogin.png" alt="Sample Image">
         <div class="overlay-text">
             <h3>Overlay Text</h3>
             <p>This is the overlay text on the image</p>

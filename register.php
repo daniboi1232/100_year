@@ -27,9 +27,9 @@ include_once 'includes/head.php';
             ?>
 
             <form method="post" action="">
-                Username: <input type="text" name="username" required><br>
-                Password: <input type="password" name="password" required><br>
-                Email: <input type="email" name="email" required><br>
+                <input type="text" name="username" required placeholder="Username"><br>
+                <input type="password" name="password" required placeholder="Password"><br>
+                <input type="email" name="email" required placeholder="Email"><br>
                 <button type="submit">Register</button>
             </form>
             <p><a href="login.php">Login</a></p>
