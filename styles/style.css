@@ -76,10 +76,12 @@ html, body {
   margin-left: 15px;
   margin-top: auto;
   margin-bottom: 5%;
+  
 }
 
 .logout_button button {
   padding: 20px;
+
 }
 
 .navbar-brand {
@@ -182,7 +184,7 @@ html, body {
   opacity: 0.8;
 }
 
-.signin .register-btn {
+.signin .register-btn,.signin .login-btn{
   background-color: var(--accent-color);
   color: white;
   padding: 5px 20px;
@@ -220,3 +222,16 @@ html, body {
   opacity: 0.05;
 }
 
+
+/* WARNING POPUP */
+
+.warning {
+  background-color: #ffdddd;
+  border-left: 12px solid #f44336;
+  height: 10%;
+}
+
+.warning p{
+  text-align: left;
+  padding: 2.5%
+}

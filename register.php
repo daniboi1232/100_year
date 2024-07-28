@@ -28,10 +28,10 @@ include_once 'includes/head.php';
 
             <form method="post" action="">
                 <input type="text" name="username" required placeholder="Username"><br>
+                <input type="email" name="email" required placeholder="Email"><br> 
                 <input type="password" name="password" required placeholder="Password"><br>
-                <input type="email" name="email" required placeholder="Email"><br>
                 <button type="submit">Register</button>
             </form>
-            <p><a href="login.php">Login</a></p>
+            <p><a href="login.php" class="login-btn">Login</a></p>
     </div>
 </body>

@@ -16,12 +16,12 @@ include_once 'includes/head.php';
             $password = $_POST['password'];
 
             $q = "SELECT * FROM users WHERE username = '$username'";
-            echo 'sdafadsf';
+            // echo 'sdafadsf';
             $r = mysqli_query($conn, $q);
-            echo 'ajdhfa';
+            // echo 'ajdhfa';
 
             if ($r->num_rows > 0) {
-                echo 'sadf';
+                // echo 'sadf';
                 $user = mysqli_fetch_assoc($r);
 
                 if (password_verify($password, $user['password_hash'])) {
@@ -34,7 +34,7 @@ include_once 'includes/head.php';
 
                 }
             } else {
-                echo 'dsfasdf';
+                // echo 'dsfasdf';
                 echo "<p>Invalid username or password.</p>";
             }
             echo 'dasdfasdf';
