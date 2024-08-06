@@ -6,7 +6,7 @@
 
     <div class="wrapper">
         <div class="main-content">
-
+            <?php include_once 'includes/merch_sql.php'?>
         </div>
     </div>
 

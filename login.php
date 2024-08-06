@@ -37,7 +37,7 @@ include_once 'includes/head.php';
                 // echo 'dsfasdf';
                 echo "<p>Invalid username or password.</p>";
             }
-            echo 'dasdfasdf';
+            // echo 'dasdfasdf';
         }
         ?>
 

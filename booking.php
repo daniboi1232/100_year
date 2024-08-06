@@ -2,12 +2,18 @@
 
 <body>
     <?php include_once 'includes/sidebar.php'; ?>
-    <?php include_once 'connect.inc'; ?>
 
     <div class="wrapper">
         <div class="main-content">
-            
+            <div class="booking-flex">
+                <?php 
+                include_once 'includes/attendee_register_sql.php';
+                include_once 'includes/session_booking_sql.php';
+                ?>
+            </div>
         </div>
     </div>
 
 </body>
+
+

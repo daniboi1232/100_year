@@ -7,10 +7,10 @@
       <a class="nav-link active" href="index.php">Home</a>
       <a class="nav-link" href="attendees.php">Current Attendees</a>
       <a class="nav-link" href="booking.php">Book A Seat</a>
-      <a class="nav-link" href="#">Contact</a>
-      <a class="nav-link" href="#">Contact</a>
-      <a class="nav-link" href="#">Contact</a>
-      <a class="nav-link" href="#">Contact</a>
+      <a class="nav-link" href="merch.php">Merchandise</a>
+      <a class="nav-link" href="#">Activities</a>
+      <a class="nav-link" href="#">Cart</a>
+      <a class="nav-link" href="#">unavaliable</a>
       <a class="nav-link" href="#">Contact</a>
     </nav>
     <?php 

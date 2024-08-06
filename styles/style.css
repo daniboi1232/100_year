@@ -2,7 +2,7 @@
     --main-color: #19356E;
     --secondary-color: #2F6690;
     --accent-color: #3A7CA5;
-    --dark-color: #DFDFDF;
+    --white-color: #ffffff;
     --grey-color: #D3D3D3;
     --light-color: #7fc2d7;
     --main-font: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
@@ -160,6 +160,7 @@ html, body {
   background-color: var(--dark-color);
   padding: 20px;
   border-radius: 5px;
+  background-color: #DDD;
 }
 
 .signin input {
@@ -234,4 +235,232 @@ html, body {
 .warning p{
   text-align: left;
   padding: 2.5%
+}
+
+
+/* ATTENDEES TABLE */
+
+.attendees_table {
+    border-collapse: collapse;
+    border-spacing: 0;
+    width: 100%;
+    border: 1px solid #ddd;    
+}
+
+.attendees_table th{
+  border-bottom: 1px solid #ddd;
+  background-color: var(--main-color);
+  color: var(--white-color);
+}
+
+.attendees_table th, td {
+  text-align: left;
+  padding: 10px;
+}
+
+.attendees_table tr:nth-child(even) {
+  background-color: #f2f5ff;
+}
+
+
+/* PRODUCT CARDS */
+
+/*
+.product-card {
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  padding: 16px;
+  margin: 16px;
+  text-align: center;
+  width: 200px;
+}
+.product-card img {
+  max-width: 100%;
+  height: auto;
+}
+.product-card h2 {
+  font-size: 1.5em;
+  margin: 0.5em 0;
+}
+.product-card p {
+  font-size: 1em;
+  color: #555;
+}
+.product-card .price {
+  font-size: 1.2em;
+  color: #000;
+}
+.product-card .stock {
+  font-size: 1em;
+  color: green;
+}
+*/
+
+.card-container{
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: 15px;
+}
+
+.card img{
+  padding-bottom: 15px;
+  width: 300px;
+  height: auto;
+}
+
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  width: 300px;
+  text-align: center;
+  font-family: arial;
+  margin: 0px 30px 40px 30px;
+}
+
+.price {
+  color: grey;
+  font-size: 22px;
+}
+
+.card button {
+  border: none;
+  outline: 0;
+  padding: 12px;
+  color: white;
+  background-color: rgba(0, 100, 176, 0.437);
+  color: rgb(0, 0, 176);
+  text-align:center;
+  cursor: pointer;
+  width: 100%;
+  font-size: 18px;
+}
+
+.card button:hover {
+  opacity: 0.7;
+}
+
+
+/* BOOKING PAGE */
+
+.booking-flex {
+  display: flex;
+}
+
+.booking-container {
+  max-width: 600px;
+  width: 100%;
+  margin: 15px;
+  padding: 20px;
+  background-color: #fff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+}
+.booking-container h1 {
+  text-align: center;
+  color: #1e90ff;
+}
+.booking-container form {
+  display: flex;
+  flex-direction: column;
+}
+.booking-container label {
+  margin-bottom: 10px;
+  color: #000000;
+}
+.booking-container input[type="text"], input[type="email"], input[type="tel"], input[type="number"]{
+  padding: 10px;
+  margin-bottom: 20px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+.checkbox-group {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20px;
+}
+.checkbox-group label {
+  margin-bottom: 5px;
+}
+.booking-container input[type="submit"] {
+  background-color: var(--main-color);
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  padding: 10px;
+  border-radius: 4px;
+}
+.booking-container input[type="submit"]:hover {
+  background-color: var(--main-color);
+}
+
+
+
+
+
+/*  For smaller devices  */
+
+
+@media only screen and (max-width: 768px) {
+  /* Make the sidebar a topbar */
+  .sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: auto;
+    background-color: var(--main-color);
+    padding-top: 10px;
+    padding-bottom: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  /* Adjust the sidebar links */
+  .sidebar .nav-link {
+    font-size: 16px;
+    padding: 10px;
+  }
+
+  /* Hide the sidebar image */
+  .sidebar-image img {
+    display: none;
+  }
+
+  /* Adjust the contact info */
+  .contact-info {
+    font-size: 14px;
+  }
+
+  /* Adjust the logout button */
+  .logout_button {
+    margin-left: auto;
+  }
+
+  /* Adjust the main content */
+  .main-content {
+    margin-left: 0;
+    padding: 20px;
+  }
+
+  /* Adjust the footer */
+  .footer {
+    margin-left: 0;
+  }
+
+  /* Adjust the booking container */
+  .booking-container {
+    max-width: 100%;
+    padding: 20px;
+  }
+
+  /* Adjust the card container */
+  .card-container {
+    flex-direction: column;
+  }
+
+  /* Adjust the card */
+  .card {
+    margin: 20px 0;
+  }
 }

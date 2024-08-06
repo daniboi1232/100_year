@@ -7,7 +7,7 @@
   <title>Bootstrap Starter Page</title>
   <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
   <link rel="stylesheet" href="styles/style.css">
-  <link rel="icon" href="images/casold.png">
+  <link rel="icon" href="images/cas-circle-logo-2.png">
   <?php include 'connect.inc'; ?>
 
 </head>
