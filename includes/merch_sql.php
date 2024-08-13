@@ -17,7 +17,12 @@ $result = $conn->query($sql);
             echo '<p>' . $row["description"] . '</p>';
             echo '<p class="price">$' . $row["price"] . '</p>';
             echo '<p class="stock">Stock: ' . $row["stock"] . '</p>';
-            echo '<p><button formaction="/cartinsert.php" >Add to Cart</button></p>';
+            echo '<form action="/cartinsert.php" method="post">';
+            echo '<input type="hidden" name="item_id" value="' . $row["id"] . '">';
+            echo '<input type="hidden" name="item_name" value="' . $row["item_name"] . '">';
+            echo '<input type="hidden" name="price" value="' . $row["price"] . '">';
+            echo '<button type="submit">Add to Cart</button>';
+            echo '</form>';
             echo '</div>';
         }
     } else {
@@ -26,5 +31,3 @@ $result = $conn->query($sql);
     $conn->close();
     ?>
 </div>
-
-
