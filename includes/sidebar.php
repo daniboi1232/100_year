@@ -1,4 +1,7 @@
   <!-- Sidebar -->
+  <?php 
+  include_once 'includes/head.php'
+  ?>
   <div class="sidebar">
     <a class="navbar-brand" href="#">
       <img src="images/100yearlogo.png" alt="Logo" style="width: 150%; max-width: 300px;"> <!-- Adjust the width as needed -->
@@ -8,9 +11,16 @@
         <a class="nav-link active" href="index.php">Home</a>
         <a class="nav-link" href="attendees.php">Current Attendees</a>
         <a class="nav-link" href="booking.php">Book A Seat</a>
-        <a class="nav-link" href="merch.php">Merchandise</a>
+        <div class="dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Store
+          </a>
+          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <a class="dropdown-item" href="merch.php">Merchandise</a>
+            <a class="dropdown-item" href="cart.php">Cart</a>
+          </div>
+        </div>
         <a class="nav-link" href="#">Activities</a>
-        <a class="nav-link" href="#">Cart</a>
         <a class="nav-link" href="#">unavaliable</a>
         <a class="nav-link" href="#">Contact</a>
         <div class="logout_button_2">
@@ -41,3 +51,7 @@
         </div>
     </div>
 </div>
+
+<!-- Include jQuery and Bootstrap JavaScript files -->
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
