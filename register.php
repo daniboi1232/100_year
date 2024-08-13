@@ -9,27 +9,55 @@ include_once 'includes/head.php';
             include_once 'connect.inc';
 
             if ($_SERVER["REQUEST_METHOD"] == "POST") {
-                $username = $_POST['username'];
-                $password = password_hash($_POST['password'], PASSWORD_BCRYPT);
-                $email = $_POST['email'];
 
-                $sql = "INSERT INTO users (username, password_hash, email) VALUES ('$username', '$password', '$email')";
-                //echo $sql;
-                if ($r = mysqli_query($conn, $sql) === TRUE) {
-                    echo "Registration successful.";
-                    sleep(2);
-                    header("Location: login.php");
+                $ver_pass = $_POST['ver_pass'];
+                $pass = $_POST['pass'];
 
+                if ($ver_pass == $pass) {
+
+                    $options = [
+                        'cost' => 12
+                    ];
+
+                    $username = $_POST['username'];
+                    $password = password_hash($_POST['pass'], PASSWORD_BCRYPT);
+                    $email = $_POST['email'];
+
+                    // Activation Token
+                    $a = md5(uniqid(rand(), true));
+
+                    // Time for activation expiry
+                    $now = time();
+                    $thirtyMinutes = $now + (30 * 60);
+                    $date_thirtyminutes = date('Y-m-d H:i:s', $thirtyMinutes);
+
+                    $sql = "INSERT INTO user (`username`,`email`, `token`, `activation_expiry`, `email_confirmation`, `password_hash`) VALUES ('$username','$email', '$a', '$date_thirtyminutes', '0', '$password')";
+                    echo $sql;
+                    if ($r = mysqli_query($conn, $sql) === TRUE) {
+                        echo "Registration successful.";
+                        sleep(2);
+                        header("Location: login.php");
+
+                    } else {
+                        echo 'adfssadf';
+                        echo "Error: " . $sql . "<br>" . $conn->error;
+                    }
                 } else {
-                    echo "Error: " . $sql . "<br>" . $conn->error;
+                    echo 'Passwords do not match';
                 }
+                
             }
             ?>
 
             <form method="post" action="">
-                <input type="text" name="username" required placeholder="Username"><br>
-                <input type="email" name="email" required placeholder="Email"><br> 
-                <input type="password" name="password" required placeholder="Password"><br>
+                <input  type="text" name="username" required placeholder="Username">
+                <br>
+                <input  type="email" name="email" required placeholder="Email">
+                <br> 
+                <input  type="password" name="pass" required placeholder="Password">
+                <br>
+                <input  type="password" name="ver_pass" required placeholder="Verify Password">
+                <br>
                 <button type="submit">Register</button>
             </form>
             <p><a href="login.php" class="login-btn">Login</a></p>

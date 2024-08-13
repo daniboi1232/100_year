@@ -17,7 +17,7 @@ $result = $conn->query($sql);
             echo '<p>' . $row["description"] . '</p>';
             echo '<p class="price">$' . $row["price"] . '</p>';
             echo '<p class="stock">Stock: ' . $row["stock"] . '</p>';
-            echo '<p><button formaction="/carinsert.php" >Add to Cart</button></p>';
+            echo '<p><button formaction="/cartinsert.php" >Add to Cart</button></p>';
             echo '</div>';
         }
     } else {

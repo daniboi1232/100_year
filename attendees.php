@@ -5,7 +5,7 @@
     include_once 'includes/sidebar.php';
     include_once 'connect.inc';
 
-    if (isset($_SESSION['user_id']) && $_SESSION['user_id'] == '1') {
+    if (isset($_SESSION['permissions']) && $_SESSION['permissions'] == '1') {
         include 'includes/attendees_sql.php';
     } else {
         include 'includes/permission_denied.php';

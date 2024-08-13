@@ -76,7 +76,10 @@ html, body {
   margin-left: 15px;
   margin-top: auto;
   margin-bottom: 5%;
-  
+}
+
+.logout_button_2 {
+  display: none;
 }
 
 .logout_button button {
@@ -98,6 +101,7 @@ html, body {
   display: flex;
   flex-direction: column;
   font-family: var(--main-font);
+  z-index:-1;
 }
 
 /* Footer CSS */
@@ -138,11 +142,13 @@ html, body {
     
 }
 .jumbotron {
-  background-color: var(--main-color);
-  color: white;
-  
+  background-color: var(--white-color);
+  color: var(--main-color);
 }
 
+.jumbotron h1{
+  font-size: 400%;
+}
 
 
 
@@ -314,6 +320,7 @@ html, body {
   text-align: center;
   font-family: arial;
   margin: 0px 30px 40px 30px;
+  
 }
 
 .price {
@@ -401,7 +408,7 @@ html, body {
 
 
 @media only screen and (max-width: 768px) {
-  /* Make the sidebar a topbar */
+  /* Make the sidebar a dropdown menu */
   .sidebar {
     position: fixed;
     top: 0;
@@ -416,31 +423,53 @@ html, body {
     align-items: center;
   }
 
+  /* Create a dropdown menu for sidebar links */
+  .sidebar-links {
+    display: none;
+    position: absolute;
+    top: 50px;
+    left: 0;
+    width: 100%;
+    background-color: var(--main-color);
+    padding: 10px;
+  }
+
+  /* Show the dropdown menu on hover */
+  .sidebar:hover .sidebar-links {
+    display:block;
+  }
+
   /* Adjust the sidebar links */
   .sidebar .nav-link {
     font-size: 16px;
     padding: 10px;
   }
 
-  /* Hide the sidebar image */
+  /* Keep the sidebar image visible */
   .sidebar-image img {
+    height: 50px;
+    width: auto;
+  }
+
+  /* Hide other sidebar elements */
+  .contact-bar, .logout_button{
     display: none;
-  }
+  } 
 
-  /* Adjust the contact info */
-  .contact-info {
-    font-size: 14px;
-  }
-
-  /* Adjust the logout button */
-  .logout_button {
-    margin-left: auto;
+  /* Show secondary logout button inside of dropdown */
+  .logout_button_2 {
+    display: block;
   }
 
   /* Adjust the main content */
   .main-content {
     margin-left: 0;
     padding: 20px;
+    margin-top: 200px;
+  }
+
+  .jumbotron h1{
+    font-size: 300%;
   }
 
   /* Adjust the footer */
@@ -449,9 +478,16 @@ html, body {
   }
 
   /* Adjust the booking container */
+  .booking-flex {
+    display: contents;
+  }
+
   .booking-container {
     max-width: 100%;
     padding: 20px;
+    margin-left: 0;
+    margin-bottom: 15px;
+    margin-top: 0;
   }
 
   /* Adjust the card container */
@@ -463,4 +499,5 @@ html, body {
   .card {
     margin: 20px 0;
   }
+
 }

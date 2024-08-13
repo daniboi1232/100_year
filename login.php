@@ -15,19 +15,31 @@ include_once 'includes/head.php';
             $username = $_POST['username'];
             $password = $_POST['password'];
 
-            $q = "SELECT * FROM users WHERE username = '$username'";
+            $q = "SELECT * FROM user WHERE username = '$username'";
             // echo 'sdafadsf';
             $r = mysqli_query($conn, $q);
             // echo 'ajdhfa';
 
             if ($r->num_rows > 0) {
-                // echo 'sadf';
+                //echo 'sadf';
                 $user = mysqli_fetch_assoc($r);
+                //echo $user;
+                //echo $password;
+
+                $options = [
+                    'cost' => 12
+                ];
+
+                $newpass = password_hash($_POST['password'], PASSWORD_BCRYPT,$options);
+                //echo $newpass;
 
                 if (password_verify($password, $user['password_hash'])) {
                     $_SESSION['user_id'] = $user['id'];
-                    echo $user['password_hash'];
+                    //echo $user['password_hash'];
                     $_SESSION['username'] = $user['username'];
+                    $_SESSION['permissions'] = $user['permiss'];
+                    //echo $_SESSION['permissions'];
+                    
                     header("Location: index.php");
                 } else {
                     echo "<p>Invalid username or password.</p>";

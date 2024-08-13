@@ -11,3 +11,6 @@
     </div>
 
 </body>
+
+
+if (password_verify($password, $user['password_hash']))
