@@ -5,6 +5,7 @@
     --white-color: #ffffff;
     --grey-color: #D3D3D3;
     --light-color: #7fc2d7;
+    --sidebar-hover: #102247;
     --main-font: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
 
@@ -17,7 +18,11 @@ html, body {
     flex-direction: column;
   }
 
-  /* SIDEBAR CSS */
+  /* 
+  
+  SIDEBAR CSS
+  
+  */
   .wrapper {
     display: flex;
     flex: 1;
@@ -93,7 +98,12 @@ html, body {
 
 
 
-/* Main Page CSS */
+/* 
+
+Main Page CSS 
+
+*/
+
 .main-content {
   margin-left: 350px;
   padding: 20px;
@@ -104,7 +114,12 @@ html, body {
   z-index:-1;
 }
 
-/* Footer CSS */
+/* 
+
+Footer CSS 
+
+*/
+
 .footer {
   background-color: var(--dark-color);
   padding: 10px 0;
@@ -156,7 +171,11 @@ html, body {
 
 
 
-/*    LOGIN / REGISTER CSS    */
+/*    
+
+LOGIN / REGISTER CSS    
+
+*/
 
 .signin {
   position:absolute;
@@ -216,7 +235,11 @@ html, body {
   background-color: var(--main-color);
 }
 
-/* Opaque Background for login page */
+/* 
+
+Opaque Background for login page 
+
+*/
 .entry::before {
   content: "";
   position: absolute;
@@ -230,7 +253,11 @@ html, body {
 }
 
 
-/* WARNING POPUP */
+/* 
+
+WARNING POPUP 
+
+*/
 
 .warning {
   background-color: #ffdddd;
@@ -244,7 +271,11 @@ html, body {
 }
 
 
-/* ATTENDEES TABLE */
+/* 
+
+ATTENDEES TABLE 
+
+*/
 
 .attendees_table {
     border-collapse: collapse;
@@ -269,7 +300,11 @@ html, body {
 }
 
 
-/* PRODUCT CARDS */
+/* 
+
+PRODUCT CARDS 
+
+*/
 
 /*
 .product-card {
@@ -346,7 +381,11 @@ html, body {
 }
 
 
-/* BOOKING PAGE */
+/* 
+
+BOOKING PAGE 
+
+*/
 
 .booking-flex {
   display: flex;
@@ -400,11 +439,63 @@ html, body {
   background-color: var(--main-color);
 }
 
+/* 
+
+SIDEBAR STORE DROPDOWN 
+
+*/
+
+.store-dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.store-dropdown-menu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  display: none;
+  
+}
+
+.store-dropdown:hover .store-dropdown-menu {
+  display: block;
+  margin-left: 15px;
+  background-color: var(--main-color);
+}
+
+.store-dropdown-menu .dropdown-item {
+  font-size: 20px;
+  font-family: var(--main-font);
+  color: white;
+  padding: 10px;
+  border-bottom: 1px solid rgba(255, 255, 255, 1);
+}
+
+.store-dropdown-item {
+  margin: 15px;
+  padding: 10px;
+  font-size: 20px;
+  color: var(--white-color);
+  width: 100%;
+}
+
+.store-dropdown-menu .dropdown-item:hover {
+  background-color: var(--sidebar-hover);
+}
+
+.store-dropdown-item:hover {
+  text-decoration: none;
+  color: var(--white-color);
+  background-color: var(--sidebar-hover);
+}
 
 
+/*  
 
+For smaller devices  
 
-/*  For smaller devices  */
+*/
 
 
 @media only screen and (max-width: 768px) {
