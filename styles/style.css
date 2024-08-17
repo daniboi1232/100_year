@@ -448,20 +448,25 @@ SIDEBAR STORE DROPDOWN
 .store-dropdown {
   position: relative;
   display: inline-block;
+  width: 100%;
 }
+
 
 .store-dropdown-menu {
   position: absolute;
   top: 100%;
   left: 0;
   display: none;
-  
+  left: 93%;
+  top: 0%;
+  background-color: var(--main-color);
 }
 
-.store-dropdown:hover .store-dropdown-menu {
+.store-dropdown:hover .store-dropdown-menu,
+.store-dropdown:focus .store-dropdown-menu,
+.store-dropdown:focus-within .store-dropdown-menu {
   display: block;
-  margin-left: 15px;
-  background-color: var(--main-color);
+  
 }
 
 .store-dropdown-menu .dropdown-item {
@@ -473,11 +478,16 @@ SIDEBAR STORE DROPDOWN
 }
 
 .store-dropdown-item {
+  display: block;
   margin: 15px;
+  
   padding: 10px;
-  font-size: 20px;
+  
+  font-size: 22.5px;
   color: var(--white-color);
-  width: 100%;
+  width: 120%;
+  text-decoration: none;
+
 }
 
 .store-dropdown-menu .dropdown-item:hover {

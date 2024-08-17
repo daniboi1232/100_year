@@ -12,7 +12,7 @@ include_once 'includes/head.php'
       <a class="nav-link" href="attendees.php">Current Attendees</a>
       <a class="nav-link" href="booking.php">Book A Seat</a>
       <div class="store-dropdown">
-        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown">
+        <a class="nav-link store-dropdown-toggle" href="#" id="navbarDropdown">
           Store
         </a>
         <div class="store-dropdown-menu" aria-labelledby="navbarDropdown">
