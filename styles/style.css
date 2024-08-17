@@ -457,10 +457,28 @@ SIDEBAR STORE DROPDOWN
   top: 100%;
   left: 0;
   display: none;
-  left: 93%;
+  left: 103.5%;
   top: 0%;
   background-color: var(--main-color);
+  padding: 10px;
+  /* border: 1px solid #ccc; */
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  width: 200px;
 }
+
+/* Teeny Weeny Little Arrow On The Teeny Weeny Little Store Dropdown */
+.store-dropdown-menu::before {
+  content: "";
+  position: absolute;
+  left: -15px; /* adjust this value to position the arrow correctly */
+  top:  12.5%; /* adjust this value to position the arrow vertically */
+  transform: translateY(-50%);
+  border-right: 20px solid var(--main-color);
+  border-top: 20px solid transparent;
+  border-bottom: 20px solid transparent;
+}
+
 
 .store-dropdown:hover .store-dropdown-menu,
 .store-dropdown:focus .store-dropdown-menu,
@@ -480,18 +498,20 @@ SIDEBAR STORE DROPDOWN
 .store-dropdown-item {
   display: block;
   margin: 15px;
-  
   padding: 10px;
-  
   font-size: 22.5px;
   color: var(--white-color);
-  width: 120%;
   text-decoration: none;
 
 }
 
 .store-dropdown-menu .dropdown-item:hover {
   background-color: var(--sidebar-hover);
+  color: var(--white-color);
+}
+
+.store-dropdown-menu .store-dropdown-item:last-child {
+  border-bottom: none;
 }
 
 .store-dropdown-item:hover {
@@ -528,7 +548,7 @@ For smaller devices
   .sidebar-links {
     display: none;
     position: absolute;
-    top: 50px;
+    top: 100px;
     left: 0;
     width: 100%;
     background-color: var(--main-color);
@@ -566,8 +586,9 @@ For smaller devices
   .main-content {
     margin-left: 0;
     padding: 20px;
-    margin-top: 200px;
+    margin-top: 140px;  
   }
+
 
   .jumbotron h1{
     font-size: 300%;
@@ -601,4 +622,31 @@ For smaller devices
     margin: 20px 0;
   }
 
+  /* Adjust the store dropdown */
+  .store-dropdown-menu {
+    left: 0;
+    top: 100%;
+  }
+
+  .store-dropdown-menu::before {
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  /* Hide the store dropdown menu on smaller devices */
+  .store-dropdown-menu {
+    display: none;
+  }
+
+  .store-dropdown:hover .store-dropdown-menu{
+    display: none;
+  }
+
+  /* Make the store button a link to a new page */
+  .store-dropdown {
+    cursor: pointer;
+  }
+
+  .store-dropdown-item {
+    display: none;
+  }
 }
