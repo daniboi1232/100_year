@@ -12,8 +12,7 @@
                 <p><a href="merch.php" class="store-dir-merch">Merchandise</a></p>
                 <a href="cart.php" class="store-dir-cart">Cart</a>
             </div>
-            <a href="index.php" >hhhhhhhh</a>
-            <button>akjsdfhlaksjdf</button>
+            
         </div>
     </div>
 

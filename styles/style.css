@@ -18,16 +18,28 @@ html, body {
     flex-direction: column;
   }
 
-  /* 
-  
-  SIDEBAR CSS
-  
-  */
-
   .wrapper {
     display: block;
     flex: 1;
+    
 }
+
+/* 
+
+Class to push index page contents to the back without affecting the button functions 
+
+*/
+
+.z-index-just {
+  z-index: -1;
+}
+
+/* 
+  
+  SIDEBAR CSS
+  
+*/
+
 
 .sidebar {
     display: flex;
@@ -529,6 +541,49 @@ For the Store directory page
 */
 
 
+.store-dir {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 20px;
+  /* background-color: #f2f2f2;
+  border: 1px solid #ddd; */
+  border-radius: 10px;
+  /* box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); */
+}
+
+.store-dir a {
+  display: block;
+  margin: 10px;
+  margin-right: 50px;
+  padding: 50px;
+  border-radius: 25px;
+  background-color: var(--main-color);
+  text-decoration: none;
+  color: var(--white-color);
+  transition: background-color 0.3s ease;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.store-dir a:hover {
+  background-color: var(--sidebar-hover);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.store-dir a:active {
+  background-color: #ccc;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+.store-dir a::before {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  margin-right: 10px;
+  background-size: 20px 20px;
+  background-repeat: no-repeat;
+  vertical-align: middle;
+}
 
 /*  
 

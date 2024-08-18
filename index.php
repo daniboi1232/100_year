@@ -16,37 +16,38 @@ include 'includes/session_check';
 
   <div class="wrapper">
     <div class="main-content">
+      <div class="z-index-just">
+        <!-- Hero Section -->
+        <div class="jumbotron jumbotron-fluid text-center">
+          <div class="container">
 
-      <!-- Hero Section -->
-      <div class="jumbotron jumbotron-fluid text-center">
-        <div class="container">
-
-          <h1 class="display-4">Welcome to kuajkdhfkajsdf</h1>
-          <p class="lead">jdfakjhsdlkfjashldkjfhlaskjdhflad.</p>
-        </div>
-      </div>
-
-      <div class="image-container">
-        <img src="./images/backgroundlogin.png" alt="Sample Image">
-        <div class="overlay-text">
-            <h3>Overlay Text</h3>
-            <p>This is the overlay text on the image</p>
-        </div>
-      </div>
-      <!-- Content Section -->
-      <div class="container">
-        <div class="row">
-          <div class="col-md-12">
-
-            <h2>Main Content</h2>
-            <p>Main Content Main Content Main Content Main Content Main Content Main Content</p>
+            <h1 class="display-4">Welcome to kuajkdhfkajsdf</h1>
+            <p class="lead">jdfakjhsdlkfjashldkjfhlaskjdhflad.</p>
           </div>
         </div>
-      </div>
 
-      <!-- Push footer to the bottom -->
-      <div class="flex-grow-1"></div>
-      <?php include 'includes/slideshow3.php';?>
+        <div class="image-container">
+          <img src="./images/backgroundlogin.png" alt="Sample Image">
+          <div class="overlay-text">
+              <h3>Overlay Text</h3>
+              <p>This is the overlay text on the image</p>
+          </div>
+        </div>
+        <!-- Content Section -->
+        <div class="container">
+          <div class="row">
+            <div class="col-md-12">
+
+              <h2>Main Content</h2>
+              <p>Main Content Main Content Main Content Main Content Main Content Main Content</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Push footer to the bottom -->
+        <div class="flex-grow-1"></div>
+        <?php include 'includes/slideshow3.php';?>
+        </div>
     </div>
   </div>
   
