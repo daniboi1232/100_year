@@ -563,6 +563,9 @@ For the Store directory page
   color: var(--white-color);
   transition: background-color 0.3s ease;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  width: 1400px;
+  height: 500px;
+  text-align: center;
 }
 
 .store-dir a:hover {

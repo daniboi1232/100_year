@@ -10,10 +10,10 @@
         <div class="main-content">
             <div class="store-dir">
                 <p><a href="merch.php" class="store-dir-merch">Merchandise</a></p>
-                <a href="cart.php" class="store-dir-cart">Cart</a>
+                <p><a href="cart.php" class="store-dir-cart">Cart</a></p>
             </div>
             
         </div>
     </div>
-
+    <?php include_once 'includes/footer.php'; ?>
 </body>

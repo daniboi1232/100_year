@@ -17,4 +17,5 @@ ob_end_clean(); // End output buffering
         </div>
     </div>
 
+    <?php include_once 'includes/footer.php'; ?>
 </body>

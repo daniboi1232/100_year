@@ -23,7 +23,6 @@ include_once 'includes/head.php'
       </div>
       <a class="nav-link" href="#">Activities</a>
       <a class="nav-link" href="#">unavaliable</a>
-      <a class="nav-link" href="#">Contact</a>
       <div class="logout_button_2">
         <form action="logout.php" method="POST">
           <input type="submit" name="expire_session" value="Log Out">
