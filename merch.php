@@ -1,3 +1,10 @@
+<?php
+ob_start(); // Start output buffering
+include_once 'includes/merch_sql.php';
+$merch_sql_output = ob_get_contents(); // Capture the output
+ob_end_clean(); // End output buffering
+?>
+
 <?php include_once 'includes/head.php' ?>
 
 <body>
@@ -6,7 +13,7 @@
 
     <div class="wrapper">
         <div class="main-content">
-            <?php include_once 'includes/merch_sql.php'?>
+        <?php echo $merch_sql_output; // Display the captured output ?>
         </div>
     </div>
 

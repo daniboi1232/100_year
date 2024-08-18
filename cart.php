@@ -6,7 +6,9 @@
 
     <div class="wrapper">
         <div class="main-content">
-
+            
+            <a href="https://www.google.com">Link to Google</a>
+            <button>Click me!</button>
         </div>
     </div>
 

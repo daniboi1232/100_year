@@ -23,8 +23,9 @@ html, body {
   SIDEBAR CSS
   
   */
+
   .wrapper {
-    display: flex;
+    display: block;
     flex: 1;
 }
 
@@ -355,7 +356,7 @@ PRODUCT CARDS
   text-align: center;
   font-family: arial;
   margin: 0px 30px 40px 30px;
-  
+  z-index: -1;  
 }
 
 .price {
@@ -453,7 +454,7 @@ SIDEBAR STORE DROPDOWN
 
 
 .store-dropdown-menu {
-  position: absolute;
+  position:absolute;
   top: 100%;
   left: 0;
   display: none;
@@ -465,6 +466,7 @@ SIDEBAR STORE DROPDOWN
   border-radius: 5px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   width: 200px;
+  z-index: 1;
 }
 
 /* Teeny Weeny Little Arrow On The Teeny Weeny Little Store Dropdown */
@@ -519,6 +521,13 @@ SIDEBAR STORE DROPDOWN
   color: var(--white-color);
   background-color: var(--sidebar-hover);
 }
+
+/*
+
+For the Store directory page
+
+*/
+
 
 
 /*  
