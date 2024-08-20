@@ -16,7 +16,7 @@ include_once 'includes/head.php'
         <a class="nav-link store-dropdown-toggle" href="store-directory.php" id="navbarDropdown">
           Store
         </a>
-        <div class="store-dropdown-menu" aria-labelledby="navbarDropdown">
+        <div class="store-dropdown-menu" aria-labelledby="navbarDropdown"">
           <a class="store-dropdown-item" href="merch.php">Merchandise</a>
           <a class="store-dropdown-item" href="cart.php">Cart</a>
         </div>

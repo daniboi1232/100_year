@@ -18,11 +18,11 @@ html, body {
     flex-direction: column;
   }
 
-  .wrapper {
+  /* .wrapper {
     display: block;
     flex: 1;
     
-}
+} */
 
 /* 
 
@@ -124,7 +124,7 @@ Main Page CSS
   display: flex;
   flex-direction: column;
   font-family: var(--main-font);
-  z-index:-1;
+  
 }
 
 /* 
@@ -368,7 +368,7 @@ PRODUCT CARDS
   text-align: center;
   font-family: arial;
   margin: 0px 30px 40px 30px;
-  z-index: -1;  
+  z-index: 1;  
 }
 
 .price {
@@ -462,6 +462,7 @@ SIDEBAR STORE DROPDOWN
   position: relative;
   display: inline-block;
   width: 100%;
+  z-index: 3;
 }
 
 
@@ -478,7 +479,6 @@ SIDEBAR STORE DROPDOWN
   border-radius: 5px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   width: 200px;
-  z-index: 1;
 }
 
 /* Teeny Weeny Little Arrow On The Teeny Weeny Little Store Dropdown */
@@ -491,14 +491,16 @@ SIDEBAR STORE DROPDOWN
   border-right: 20px solid var(--main-color);
   border-top: 20px solid transparent;
   border-bottom: 20px solid transparent;
+  z-index: 3;
+
 }
 
 
 .store-dropdown:hover .store-dropdown-menu,
 .store-dropdown:focus .store-dropdown-menu,
 .store-dropdown:focus-within .store-dropdown-menu {
-  display: block;
-  
+  display: block;  
+  z-index: 3;
 }
 
 .store-dropdown-menu .dropdown-item {
@@ -507,6 +509,8 @@ SIDEBAR STORE DROPDOWN
   color: white;
   padding: 10px;
   border-bottom: 1px solid rgba(255, 255, 255, 1);
+  z-index: 3;
+
 }
 
 .store-dropdown-item {
@@ -516,22 +520,31 @@ SIDEBAR STORE DROPDOWN
   font-size: 22.5px;
   color: var(--white-color);
   text-decoration: none;
+  z-index: 3;
+
 
 }
 
 .store-dropdown-menu .dropdown-item:hover {
   background-color: var(--sidebar-hover);
   color: var(--white-color);
+  z-index: 3;
+
 }
 
 .store-dropdown-menu .store-dropdown-item:last-child {
   border-bottom: none;
+  z-index: 3;
+
+
 }
 
 .store-dropdown-item:hover {
   text-decoration: none;
   color: var(--white-color);
   background-color: var(--sidebar-hover);
+  z-index: 3;
+
 }
 
 /*
@@ -550,12 +563,16 @@ For the Store directory page
   border: 1px solid #ddd; */
   border-radius: 10px;
   /* box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); */
+  /* background-image: url("/images/casold.png"); */
+
 }
 
 .store-dir a {
   display: block;
+  font-size: 40px;
   margin: 10px;
   margin-right: 50px;
+  margin-left: 50px;
   padding: 50px;
   border-radius: 25px;
   background-color: var(--main-color);
@@ -563,14 +580,23 @@ For the Store directory page
   color: var(--white-color);
   transition: background-color 0.3s ease;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  width: 1400px;
-  height: 500px;
+  width: 500px;
+  height: 300px;
   text-align: center;
+
+
+}
+
+.store-dir p {
+  margin-top: auto;
+  margin-bottom: auto;
+
 }
 
 .store-dir a:hover {
   background-color: var(--sidebar-hover);
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+
 }
 
 .store-dir a:active {
