@@ -16,7 +16,7 @@ $result = $conn->query($sql);
             echo '<h2>' . $row["item_name"] . '</h2>';
             echo '<p>' . $row["description"] . '</p>';
             echo '<p class="price">$' . $row["price"] . '</p>';
-            echo '<form action="/cartinsert.php" method="post">';
+            echo '<form action="cart-insert.php" method="post">';
             echo '<input type="hidden" name="item_id" value="' . $row["id"] . '">';
             echo '<input type="hidden" name="item_name" value="' . $row["item_name"] . '">';
             echo '<input type="hidden" name="price" value="' . $row["price"] . '">';

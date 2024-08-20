@@ -6,9 +6,9 @@
 
     <div class="wrapper">
         <div class="main-content">
-            
-            <a href="https://www.google.com">Link to Google</a>
-            <button>Click me!</button>
+            <?php include_once 'includes/cart-sql.php'; ?>
+            <!-- <a href="https://www.google.com">Link to Google</a>
+            <button>Click me!</button> -->
         </div>
     </div>
 
