@@ -284,6 +284,16 @@ WARNING POPUP
   padding: 2.5%
 }
 
+.notsobad-warning {
+  background-color: #edffdd;
+  border-left: 12px solid #27c134;
+  height: 10%;
+}
+.notsobad-warning p{
+  text-align: left;
+  padding: 2.5%
+}
+
 
 /* 
 
