@@ -1,5 +1,5 @@
 <?php
-//include_once 'connect.inc';
+include_once 'connect.inc';
 
 // echo 'hello world';
 // Get user ID from session
@@ -9,13 +9,25 @@ $user_id = $_SESSION['user_id'];
 // echo $user_id;
 
 // Retrieve cart items from database
-$query = "SELECT * FROM cart WHERE user_id = '$user_id'";
-$result = mysqli_query($conn, $query);
+$q = "SELECT * FROM cart WHERE user_id = '$user_id'";
+$r = $conn->query($q);
+// echo $r;
+
+// echo $r;
+// $row = mysqli_fetch_assoc($result);
+
+
+// Store cart items in an array
+$cart_items = array();
+while ($row = mysqli_fetch_assoc($r)) {
+    $cart_items[] = $row;
+}
+
 
 // Calculate cart total
 $cart_total = 0;
-while ($row = mysqli_fetch_assoc($result)) {
-    $cart_total += $row['item_price'] * $row['item_quantity'];
+foreach ($cart_items as $item) {
+    $cart_total += $item['item_price'] * $item['item_quantity'];
 }
 // echo 'hello world';
 ?>
@@ -30,32 +42,39 @@ while ($row = mysqli_fetch_assoc($result)) {
             <th>Subtotal</th>
             <th>Action</th>
         </tr>
-        <?php while ($row = mysqli_fetch_assoc($result)) { ?>
+        <?php foreach ($cart_items as $item) { ?>
         <tr>
-            <td><?php echo $row['item_name']; ?></td>
             <td>
-                <input type="number" value="<?php echo $row['item_quantity']; ?>" />
-                <button onclick="update_quantity(<?php echo $user_id; ?>, <?php echo $row['item_id']; ?>, this.value)">Update</button>
+                <?php 
+                echo $item['item_name']; 
+                //echo "Hello Workd";
+                ?>
+                
             </td>
-            <td><?php echo $row['item_price']; ?></td>
-            <td><?php echo $row['item_price'] * $row['item_quantity']; ?></td>
-            <td><button onclick="remove_from_cart(<?php echo $user_id; ?>, <?php echo $row['item_id']; ?>)">Remove</button></td>
+            <td>
+                <form action="update_cart_quantity.php" method="post">
+                    <input type="number" name="quantity" value="<?php echo $item['item_quantity']; ?>" />
+                    <input type="hidden" name="item_id" value="<?php echo $item['item_id']; ?>" />
+                    <button type="submit">Update</button>
+                </form>
+            </td>
+            <td>
+                <?php echo $item['item_price']; ?>
+            </td>
+            <td>
+                <?php echo $item['item_price'] * $item['item_quantity']; ?>
+            </td>
+            <td><form action="remove_from_cart.php" method="post">
+                    <input type="hidden" name="item_id" value="<?php echo $item['item_id']; ?>" />
+                    <input type="hidden" name="user_id" value="<?php echo $user_id; ?>" />
+                    <button type="submit">Remove</button>
+                </form>
+            </td>
         </tr>
         <?php } ?>
         <tr>
-            <td colspan="4">Total: <?php echo $cart_total; ?></td>
+            <td colspan="4">Total: $<?php echo $cart_total; ?> NZD</td>
         </tr>
     </table>
 
-    <script>
-        function update_quantity(user_id, item_id, new_quantity) {
-            // Send AJAX request to update cart quantity
-            // ...
-        }
-
-        function remove_from_cart(user_id, item_id) {
-            // Send AJAX request to remove item from cart
-            // ...
-        }
-    </script>
 </body>
