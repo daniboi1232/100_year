@@ -302,27 +302,83 @@ ATTENDEES TABLE
 */
 
 .attendees_table {
-    border-collapse: collapse;
-    border-spacing: 0;
-    width: 100%;
-    border: 1px solid #ddd;    
+  border-collapse: collapse;
+  border-spacing: 0;
+  width: 100%;
+  border: 1px solid #ddd;    
 }
 
 .attendees_table th{
-  border-bottom: 1px solid #ddd;
-  background-color: var(--main-color);
-  color: var(--white-color);
+border-bottom: 1px solid #ddd;
+background-color: var(--main-color);
+color: var(--white-color);
 }
 
 .attendees_table th, td {
-  text-align: left;
-  padding: 10px;
+text-align: left;
+padding: 10px;
 }
 
 .attendees_table tr:nth-child(even) {
-  background-color: #f2f5ff;
+background-color: #f2f5ff;
 }
 
+.search-form {
+  margin-bottom: 20px;
+  padding: 10px;
+  background-color: #f7f7f7;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  width: max-content;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.search-form label {
+  margin-bottom: 0;
+  font-weight: bold;
+  color: #333;
+  font-size: 14px;
+  margin-right: 10px;
+}
+
+.search-form input[type="text"], .search-form select {
+  width: 150px;
+  height: 30px;
+  margin-bottom: 0;
+  margin-left: 10px;
+  padding: 5px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 14px;
+  font-family: var(--main-font);
+}
+
+.search-form input[type="submit"] {
+  width: 50px;
+  height: 30px;
+  background-color: var(--main-color);
+  color: #fff;
+  padding: 5px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  font-size: 14px;
+  font-family: var(--main-font);
+  margin-left: 10px;
+}
+
+.search-form input[type="submit"]:hover {
+  background-color: var(--sidebar-hover);
+}
+
+.search-form .form-control:focus {
+  border-color: var(--main-color);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
 
 /* 
 
@@ -804,5 +860,37 @@ For smaller devices
 
   .store-dropdown-item {
     display: none;
+  }
+
+  /* Adjust the Attendee Search to fit the screen */
+  .search-form {
+    padding: 10px;
+    width: 100%;
+  }
+  .search-form label {
+    margin-bottom: 5px;
+  }
+  .search-form input[type="text"], .search-form select {
+    width: 100%;
+    height: 30px;
+    margin-bottom: 10px;
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 14px;
+    font-family: var(--main-font);
+  }
+  .search-form input[type="submit"] {
+    width: 100%;
+    height: 30px;
+    background-color: var(--main-color);
+    color: #fff;
+    padding: 5px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    font-size: 14px;
+    font-family: var(--main-font);
   }
 }
