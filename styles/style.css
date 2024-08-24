@@ -625,6 +625,35 @@ For the Store directory page
   vertical-align: middle;
 }
 
+/*
+
+FOR CART REDIRECT BUTTON
+
+*/
+
+.redirect_button {
+  background-color: var(--main-color);
+  color: var(--white-color);
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin-top: 15px;
+  width: 50%;
+}
+
+
+
+
+
+
+
+
+
+
+
+
 /*  
 
 For smaller devices  

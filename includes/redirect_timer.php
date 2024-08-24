@@ -1,10 +1,10 @@
 <body>
-    <button id="redirect-button">Redirecting to cart in 5 seconds...</button>
+    <button class="redirect_button" id="redirect-button">You should be automatically redirected in 6 seconds...</button>
     <script>
         var button = document.getElementById('redirect-button');
         var count = 5;
         var interval = setInterval(function() {
-            button.textContent = 'Redirecting to cart in ' + count + ' seconds...';
+            button.textContent = 'You should be automatically redirected in ' + count + ' seconds...';
             count--;
             if (count === 0) {
                 clearInterval(interval);
