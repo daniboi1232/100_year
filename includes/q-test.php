@@ -1,9 +1,9 @@
 <?php
 include_once 'connect.inc';
 
-$item_id = $_POST['item_id'];
-$user_id = $_POST['user_id'];
-$quantity = $_POST['quantity'];
+$item_id = 1; // Replace with a valid item ID
+$user_id = 1; // Replace with a valid user ID
+$quantity = 2; // Replace with a valid quantity
 
 // Update quantity in database
 $q = "UPDATE cart SET item_quantity = '$quantity' WHERE item_id = '$item_id' AND user_id = '$user_id'";

@@ -644,11 +644,34 @@ FOR CART REDIRECT BUTTON
 }
 
 
+/* 
 
+CART PAGE
 
+*/
 
+.cart-btn {
+  background-color: var(--main-color);
+  color: var(--white-color);
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin-top: 15px;
+  width: 35%;
+}
 
-
+.cart-btn:hover {
+  background-color: var(--sidebar-hover);
+  }
+.cart-btn:active {
+  background-color: var(--active-color);
+}
+.cart-btn:focus {
+  outline: none;
+  box-shadow: 0 0 10px var(--main-color);
+}
 
 
 
