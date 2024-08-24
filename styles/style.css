@@ -326,10 +326,10 @@ background-color: #f2f5ff;
 .search-form {
   margin-bottom: 20px;
   padding: 10px;
-  background-color: #f7f7f7;
+  background-color: var(--white-color);
   border: 1px solid #ccc;
   border-radius: 10px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
   width: max-content;
   display: flex;
   flex-direction: row;
@@ -517,6 +517,10 @@ BOOKING PAGE
 }
 .booking-container input[type="submit"]:hover {
   background-color: var(--main-color);
+}
+
+.reg-book-btn {
+  margin-top: auto;
 }
 
 /* 
