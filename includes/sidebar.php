@@ -21,8 +21,7 @@ include_once 'includes/head.php'
           <a class="store-dropdown-item" href="cart.php">Cart</a>
         </div>
       </div>
-      <a class="nav-link" href="#">Activities</a>
-      <a class="nav-link" href="#">unavaliable</a>
+      
       <div class="logout_button_2">
         <form action="logout.php" method="POST">
           <input type="submit" name="expire_session" value="Log Out">
