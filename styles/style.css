@@ -179,7 +179,85 @@ Footer CSS
   font-size: 400%;
 }
 
+.row {
+  margin-top: 20px;
+}
 
+/* Content Section styles */
+.content-section {
+  padding: 40px 0;
+  background-color: var(--white-color);
+}
+
+.content-section h2 {
+  font-weight: bold;
+  margin-top: 0;
+  color: #337ab7;
+}
+
+.content-section p {
+  font-size: 16px;
+  color: #666;
+  margin-bottom: 20px;
+}
+
+/* Timeline styles */
+.timeline {
+  padding: 20px;
+  background-color: #f7f7f7;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  margin-bottom: 20px;
+}
+
+.timeline-item {
+  padding: 20px;
+  border-bottom: 1px solid #ddd;
+}
+
+.timeline-item:last-child {
+  border-bottom: none;
+}
+
+.timeline-item h3 {
+  font-weight: bold;
+  margin-top: 0;
+}
+
+.timeline-item p {
+  font-size: 16px;
+  color: #666;
+}
+
+/* Testimonials styles */
+.testimonials {
+  padding: 20px;
+  background-color: #f7f7f7;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  margin-bottom: 20px;
+}
+
+.testimonial {
+  padding: 20px;
+  border-bottom: 1px solid #ddd;
+}
+
+.testimonial:last-child {
+  border-bottom: none;
+}
+
+.testimonial p {
+  font-size: 16px;
+  color: #666;
+  font-style: italic;
+}
+
+.testimonial h3 {
+  font-weight: bold;
+  margin-top: 0;
+  color: #337ab7;
+}
 
 
 

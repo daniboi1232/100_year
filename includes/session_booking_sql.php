@@ -48,11 +48,12 @@
         } else {
 
             // PUT IN A SECTION THAT CHECKS IF THEY HAVE ALREADY BOOKED INTO AN ACTIVITY
-
-
-
-
-
+            $q = "SELECT * FROM activity_signups WHERE attendees_id = (SELECT id FROM attendees WHERE first_name = '$name' AND phone_number = '$phone')";
+            $r = mysqli_query($conn, $q);
+            if (mysqli_num_rows($r) > 0) {
+                echo 'You have already booked into an activity.'."\n".'Please Call or Email to change your booking.';
+                exit;
+            }
 
 
             // Convert the seminars array to a comma-separated string

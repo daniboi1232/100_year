@@ -10,7 +10,7 @@ include_once 'includes/head.php'
     <div class="sidebar-links">
       <a class="nav-link active" href="index.php">Home</a>
       <a class="nav-link" href="attendees.php">Current Attendees</a>
-      <a class="nav-link" href="booking.php">Book A Seat</a>
+      <a class="nav-link" href="booking.php">Event Booking</a>
       <div class="store-dropdown">
         
         <a class="nav-link store-dropdown-toggle" href="store-directory.php" id="navbarDropdown">

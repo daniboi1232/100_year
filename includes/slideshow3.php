@@ -21,7 +21,7 @@
   
   <!-- The slideshow/carousel -->
   <div>
-    <div class="carousel-inner" style="max-height: 480px;">
+    <div class="carousel-inner" style="max-height: 500px;">
         <div class="carousel-item active">
         <img src="images/100yearlogo.png" alt="Los Angeles" class="d-block rounded" style="width:100%">
         </div>
