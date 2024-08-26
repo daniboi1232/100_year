@@ -27,7 +27,7 @@ include 'includes/session_check';
         </div>
 
         <div class="image-container">
-          <img src="./images/backgroundlogin.png" alt="Sample Image">
+          <img src="./images/page-images/oldphoto.png" alt="Sample Image">
           <div class="overlay-text">
               <h3>A Legacy of Success</h3>
               <p>100 years of making a difference in our community.</p>

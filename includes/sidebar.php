@@ -41,8 +41,8 @@ include_once 'includes/head.php'
       <div class="contact-bar">
           <div class="contact-info">
               <p>For Inquires - Contact Us</p>
-              <p>Phone: (123) 456-7890</p>
-              <p>Email: info@example.com</p>
+              <p>Phone: (03) 352 9173</p>
+              <p>Email: centenary@cas.school.nz</p>
           </div>                
           <div class="sidebar-image">
               <img src="images/newlogo.png" alt="CAS Logo" class="cas-logo" >

@@ -4,16 +4,42 @@
 error_reporting(E_ALL);
 ini_set('display_errors', 1);
 
-
 include_once 'connect.inc';
 
-echo 'Connected to database: ' . $conn->host_info;
+if (isset($_POST['update'])) {
+    $item_id = $_POST['item_id'];
+    $user_id = $_POST['user_id'];
+    $quantity = $_POST['quantity'];
+
+    // Update quantity in database
+    $q = "UPDATE cart SET item_quantity = '$quantity' WHERE item_id = '$item_id' AND user_id = '$user_id'";
+    $conn->query($q);
+
+    // Redirect to same page to refresh the cart
+    header('Location: cart.php');
+    exit;
+} elseif (isset($_POST['delete'])) {
+    $item_id = $_POST['item_id'];
+    $user_id = $_POST['user_id'];
+
+    // Delete item from cart in database
+    $q = "DELETE FROM cart WHERE item_id = '$item_id' AND user_id = '$user_id'";
+    $conn->query($q);
+
+    // Redirect to same page to refresh the cart
+    header('Location: cart.php');
+    exit;
+} 
+
+
+
+// echo 'Connected to database: ' . $conn->host_info;
 
 // echo 'hello world';
 // Get user ID from session
 $user_id = $_SESSION['user_id'];
 
-echo 'User ID: ' . $_SESSION['user_id'];
+// echo 'User ID: ' . $_SESSION['user_id'];
 // echo $_SESSION['user_id'];
 // echo $user_id;
 
@@ -41,7 +67,7 @@ foreach ($cart_items as $item) {
 // echo 'hello world';
 ?>
 
-<body>
+<body class="cart">
     <h1>Cart</h1>
     <table>
         <tr>
@@ -53,61 +79,34 @@ foreach ($cart_items as $item) {
         </tr>
         <?php foreach ($cart_items as $item) { ?>
         <tr>
-            <td>
-                <?php echo $item['item_name']; ?>
-            </td>
-            <td>
-                <input type="number" id="quantity-<?php echo $item['item_id']; ?>" value="<?php echo $item['item_quantity']; ?>" />
-                <button class="cart-btn" onclick="updateQuantity(<?php echo $item['item_id']; ?>, <?php echo $user_id; ?>)">Update</button>
-            </td>
-            <td>
-                <?php echo $item['item_price']; ?>
-            </td>
-            <td>
-                <?php echo $item['item_price'] * $item['item_quantity']; ?>
-            </td>
-            <td>
-                <button class="cart-btn" onclick="removeFromCart(<?php echo $item['item_id']; ?>, <?php echo $user_id; ?>)">Remove</button>
-            </td>
+            <form action="" method="post">
+                <input type="hidden" name="item_id" value="<?php echo $item['item_id']; ?>">
+                <input type="hidden" name="user_id" value="<?php echo $user_id; ?>">
+                <td>
+                    <?php echo $item['item_name']; ?>
+                </td>
+                <td>
+                    <input type="number" name="quantity" class="cart-inp" value="<?php echo $item['item_quantity'];?>" />
+                    <button type="submit" name="update" class="cart-btn" >Update</button>
+                </td>
+                <td>
+                    <?php echo $item['item_price']; ?>
+                </td>
+                <td>
+                    <?php echo $item['item_price'] * $item['item_quantity']; ?>
+                </td>
+            </form>
+            <form action="" method="post">
+                <input type="hidden" name="item_id" value="<?php echo $item['item_id']; ?>">
+                <input type="hidden" name="user_id" value="<?php echo $user_id; ?>">
+                <td>
+                    <button type="submit" name="delete" class="cart-btn">Remove</button>
+                </td>
+            </form>
         </tr>
         <?php } ?>
         <tr>
             <td colspan="4">Total: $<?php echo $cart_total; ?> NZD</td>
         </tr>
     </table>
-
-    <script>
-        function updateQuantity(itemId, userId) {
-            var quantity = document.getElementById('quantity-' + itemId).value;
-            var xhr = new XMLHttpRequest();
-            xhr.open('POST', 'includes/update_cart_quantity.php', true);
-            xhr.setRequestHeader('Content-type', 'application/x-www-form-urlencoded');
-            xhr.onload = function() {
-                if (xhr.status === 200) {
-                    // Update the cart total and item quantity dynamically
-                    // You can use JavaScript to update the HTML elements
-                    console.log('Quantity updated successfully!');
-                } else {
-                    console.log('Error updating quantity: ' + xhr.statusText);
-                }
-            };
-            xhr.send('item_id=' + itemId + '&quantity=' + quantity + '&user_id=' + userId);
-        }
-
-        function removeFromCart(itemId, userId) {
-            var xhr = new XMLHttpRequest();
-            xhr.open('POST', 'includes/remove_from_cart.php', true);
-            xhr.setRequestHeader('Content-type', 'application/x-www-form-urlencoded');
-            xhr.onload = function() {
-                if (xhr.status === 200) {
-                    // Remove the item from the cart dynamically
-                    // You can use JavaScript to remove the HTML elements
-                    console.log('Item removed successfully!');
-                } else {
-                    console.log('Error removing item: ' + xhr.statusText);
-                }
-            };
-            xhr.send('item_id=' + itemId + '&user_id=' + userId);
-        }
-    </script>
 </body>

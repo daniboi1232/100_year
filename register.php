@@ -13,7 +13,14 @@ include_once 'includes/head.php';
                 $ver_pass = $_POST['ver_pass'];
                 $pass = $_POST['pass'];
 
-                if ($ver_pass == $pass) {
+                if (strlen($pass) < 7) {
+                    echo 'Password must be at least 7 characters long.';
+                } elseif (!preg_match('/^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)[A-Za-z\d]{7,}$/', $pass)) {
+                    echo nl2br ("Password must contain at least: \n One lowercase letter, \n One uppercase letter, \n and One digit.");
+                } elseif ($ver_pass != $pass) {
+                    echo 'Passwords do not match';
+                } else {
+
 
                     $options = [
                         'cost' => 12
@@ -42,8 +49,6 @@ include_once 'includes/head.php';
                         echo 'adfssadf';
                         echo "Error: " . $sql . "<br>" . $conn->error;
                     }
-                } else {
-                    echo 'Passwords do not match';
                 }
                 
             }

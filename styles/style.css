@@ -3,6 +3,7 @@
     --secondary-color: #2F6690;
     --accent-color: #3A7CA5;
     --white-color: #ffffff;
+    --lesserwhite-color: #f1f1f1;
     --grey-color: #D3D3D3;
     --light-color: #7fc2d7;
     --sidebar-hover: #102247;
@@ -139,12 +140,11 @@ Footer CSS
   margin-left: 300px;
   margin-top: auto;
 }
+
 .img{
   opacity: 0.3;
   padding-bottom: 20px;
 }
-
-
 
 .image-container {
     position: relative;
@@ -153,11 +153,13 @@ Footer CSS
     border: 2px solid #DDD;
     border-radius: 10px;
     overflow: hidden;
+    border: 3px solid var(--grey-color); 
 }
 
 .image-container img {
     width: 100%;
     display: block;
+    border-radius: 5px;
 }
 
 .overlay-text {
@@ -646,7 +648,7 @@ SIDEBAR STORE DROPDOWN
 .store-dropdown:focus .store-dropdown-menu,
 .store-dropdown:focus-within .store-dropdown-menu {
   display: block;  
-  z-index: 3;
+  z-index: 999;
 }
 
 .store-dropdown-menu .dropdown-item {
@@ -721,10 +723,11 @@ For the Store directory page
   margin-left: 50px;
   padding: 50px;
   border-radius: 25px;
-  background-color: var(--main-color);
+  background-color: var(--lesserwhite-color);
   text-decoration: none;
-  color: var(--white-color);
+  color: var(--main-color);
   transition: background-color 0.3s ease;
+  border: 1px solid var(--main-color);
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   width: 500px;
   height: 300px;
@@ -740,8 +743,9 @@ For the Store directory page
 }
 
 .store-dir a:hover {
-  background-color: var(--sidebar-hover);
+  background-color: var(--main-color);
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  color: var(--white-color);
 
 }
 
@@ -767,8 +771,8 @@ FOR CART REDIRECT BUTTON
 */
 
 .redirect_button {
-  background-color: var(--main-color);
-  color: var(--white-color);
+  background-color: var(--white-color);
+  color: var(--main-color);
   padding: 10px 20px;
   border: none;
   border-radius: 5px;
@@ -871,6 +875,7 @@ For smaller devices
   /* Show secondary logout button inside of dropdown */
   .logout_button_2 {
     display: block;
+    margin-top: 10px;
   }
 
   /* Adjust the main content */
@@ -930,6 +935,7 @@ For smaller devices
 
   .store-dropdown:hover .store-dropdown-menu{
     display: none;
+
   }
 
   /* Make the store button a link to a new page */
@@ -971,5 +977,36 @@ For smaller devices
     transition: background-color 0.3s ease;
     font-size: 14px;
     font-family: var(--main-font);
+  }
+
+
+  /* Adjust the cart table */
+  .cart table {
+    font-size: 14px;
+  }
+
+  .cart th, td {
+    padding: 8px 4px;
+  }
+
+  /* Adjust the cart forms */
+  .cart form {
+    display: inline-block;
+    margin: 0 10px;
+  }
+
+  /* Style the cart buttons */
+  .cart .cart-btn {
+    font-size: 12px;
+    padding: 4px 8px;
+  }
+
+  /* Adjust the total row */
+  .cart tr:last-child {
+    font-size: 16px;
+    font-weight: bold;
+  }
+  .cart-inp {
+    width: 50%;
   }
 }
