@@ -25,6 +25,7 @@ if (isset($_POST['update'])) {
     header('Location: cart.php');
     exit;
 } elseif (isset($_POST['delete'])) {
+
     $item_id = $_POST['item_id'];
     $user_id = $_POST['user_id'];
 
@@ -35,7 +36,13 @@ if (isset($_POST['update'])) {
     // Redirect to same page to refresh the cart
     header('Location: cart.php');
     exit;
-} 
+} elseif (isset($_POST['complete_order'])) {
+    $q = "UPDATE cart SET paid = 1 WHERE user_id = '$user_id'";
+    $conn->query($q);
+    header('Location: cart.php');
+    exit;
+}
+
 
 
 
@@ -92,8 +99,8 @@ foreach ($cart_items as $item) {
                     <?php echo $item['item_name']; ?>
                 </td>
                 <td>
-                    <input type="number" name="quantity" class="cart-inp" value="<?php echo $item['item_quantity'];?>" min="0" />
-                    <button type="submit" name="update" class="cart-btn" >Update</button>
+                    <input type="number" name="quantity" class="cart-inp" value="<?php echo $item['item_quantity'];?>" min="0" <?php if($item['paid'] == 1) echo 'disabled'; ?> />
+                    <button type="submit" name="update" class="cart-btn" <?php if($item['paid'] == 1) echo 'disabled'; ?>>Update</button>
                 </td>
                 <td>
                     <?php echo $item['item_price']; ?>
@@ -106,13 +113,19 @@ foreach ($cart_items as $item) {
                 <input type="hidden" name="item_id" value="<?php echo $item['item_id']; ?>">
                 <input type="hidden" name="user_id" value="<?php echo $user_id; ?>">
                 <td>
-                    <button type="submit" name="delete" class="cart-btn">Remove</button>
+                    <button type="submit" name="delete" class="cart-btn" <?php if($item['paid'] == 1) echo 'disabled'; ?>>Remove</button>
                 </td>
             </form>
         </tr>
         <?php } ?>
         <tr>
-            <td colspan="4">Total: $<?php echo $cart_total; ?> NZD</td>
+            <td colspan="3"></td>
+            <td>Total: $<?php echo $cart_total; ?> NZD</td>
+            <td>
+                <form action="" method="post">
+                    <button type="submit" name="complete_order" class="cart-btn">Complete Order</button>
+                </form>
+            </td>
         </tr>
     </table>
 </body>
