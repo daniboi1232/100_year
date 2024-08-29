@@ -15,7 +15,7 @@ ob_end_clean(); // End output buffering
         <div class="main-content">
         <?php 
             echo $merch_sql_output; // Display the captured output 
-        ?>
+        ?> 
 
 
 </div>

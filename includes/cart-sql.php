@@ -11,10 +11,16 @@ if (isset($_POST['update'])) {
     $user_id = $_POST['user_id'];
     $quantity = $_POST['quantity'];
 
-    // Update quantity in database
-    $q = "UPDATE cart SET item_quantity = '$quantity' WHERE item_id = '$item_id' AND user_id = '$user_id'";
-    $conn->query($q);
-
+    // Check if quantity is negative
+    if ($quantity < 0) {
+        // Delete item from cart in database
+        $q = "DELETE FROM cart WHERE item_id = '$item_id' AND user_id = '$user_id'";
+        $conn->query($q);
+    } else {
+        // Update quantity in database
+        $q = "UPDATE cart SET item_quantity = '$quantity' WHERE item_id = '$item_id' AND user_id = '$user_id'";
+        $conn->query($q);
+    }
     // Redirect to same page to refresh the cart
     header('Location: cart.php');
     exit;
@@ -79,14 +85,14 @@ foreach ($cart_items as $item) {
         </tr>
         <?php foreach ($cart_items as $item) { ?>
         <tr>
-            <form action="" method="post">
+        <form action="" method="post">
                 <input type="hidden" name="item_id" value="<?php echo $item['item_id']; ?>">
                 <input type="hidden" name="user_id" value="<?php echo $user_id; ?>">
                 <td>
                     <?php echo $item['item_name']; ?>
                 </td>
                 <td>
-                    <input type="number" name="quantity" class="cart-inp" value="<?php echo $item['item_quantity'];?>" />
+                    <input type="number" name="quantity" class="cart-inp" value="<?php echo $item['item_quantity'];?>" min="0" />
                     <button type="submit" name="update" class="cart-btn" >Update</button>
                 </td>
                 <td>
