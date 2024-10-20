@@ -1,6 +1,6 @@
 <?php  
 
-include 'includes/session_check';
+
 
 
 
@@ -23,6 +23,9 @@ include 'includes/session_check';
 
             <h1 class="display-4">Celebrating 100 Years of Excellence</h1>
             <p class="lead">A century of innovation, perseverance, and achievement.</p>
+            <?php 
+              // echo $_SESSION['user_id'];
+            ?>
           </div>
         </div>
 

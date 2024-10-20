@@ -1,4 +1,4 @@
-<?php 
+<?php
 include 'connect.inc';
 
 $sql = "SELECT id, item_name, description, price, image_url FROM store_items";
@@ -14,7 +14,7 @@ $result = $conn->query($sql);
         while($row = $result->fetch_assoc()) {
             echo '<div class="card">';
             // echo '<img src="' . $row["image_url"] . '" alt="images/placeholder.png">';
-            echo '<img src="images/placeholder.png" alt="images/placeholder.png">';
+            echo '<img src="images/merch/' . $row["image_url"] . '" alt="images/placeholder.png">';
             echo '<h2>' . $row["item_name"] . '</h2>';
             echo '<p>' . $row["description"] . '</p>';
             echo '<p class="price">$' . $row["price"] . '</p>';

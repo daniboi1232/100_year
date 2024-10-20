@@ -15,7 +15,7 @@ include_once 'includes/head.php';
 
                 if (strlen($pass) < 7) {
                     echo 'Password must be at least 7 characters long.';
-                } elseif (!preg_match('/^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)[A-Za-z\d]{7,}$/', $pass)) {
+                } elseif (!preg_match('/^(?=.*[a-z])(?=.*[A-Z])(?=.*\d).{7,}$/', $pass)) {
                     echo nl2br ("Password must contain at least: \n One lowercase letter, \n One uppercase letter, \n and One digit.");
                 } elseif ($ver_pass != $pass) {
                     echo 'Passwords do not match';

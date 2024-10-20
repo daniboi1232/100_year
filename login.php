@@ -1,13 +1,23 @@
 
 <?php 
+
+include 'includes/session_check.php';
+
 session_start();
+
+
 
 include_once 'includes/head.php';
 
 
 
 ?>
+
+
 <body class="entry">
+    <?php 
+        include 'includes/intro.php';
+    ?>
     <div class="signin">
         <h2>Login</h2>
 

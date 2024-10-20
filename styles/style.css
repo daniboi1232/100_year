@@ -814,7 +814,39 @@ CART PAGE
 
 
 
+.intro-section {
+  background-color: #ffffff; /* Set background to white */
+  padding: 20px; /* Maintain padding for spacing */
+  border-radius: 5px; /* Set border radius for rounded corners */
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+  margin: 20px auto; /* Center the section horizontally */
+  width: 66.67%; /* Bring in the left and right sides about a third of the page */
+}
 
+.intro-content {
+  display: flex; /* Use Flexbox for layout */
+  align-items: center; /* Center items vertically */
+}
+
+.intro-image {
+  width: 150px; /* Set a fixed width for the image */
+  height: auto; /* Maintain aspect ratio */
+  margin-right: 20px; /* Add space between the image and text */
+}
+
+.intro-text {
+  flex: 1; /* Allow the text content to take the remaining space */
+}
+
+.intro-section h1 {
+  color: var(--main-color); /* Set text color for the heading */
+  margin-bottom: 10px; /* Add space below the heading */
+}
+
+.intro-section p {
+  color: var(--main-color); /* Set text color for the paragraph */
+  margin-top: 0; /* Remove default margin on top */
+}
 
 /*  
 
